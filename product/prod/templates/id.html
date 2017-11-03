@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        <style>
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+</style>
+    </style>
+</head>
+    <body>
+    {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+        <h1>{{name}}</h1>
+        <b><table border="5">
+             <tr style="color:Black" bgcolor="Gray">
+              
+                <th>Quantity</th>
+                <th>Product Name</th>
+                <th>Price</th>
+             </tr>
+        
+            <tr style="text-align:center">
+            
+                <td>{{ hi.quantity}}</td>
+                <td>{{ hi.name}}</td>
+                <td>{{ hi.price}}</td>
+
+            </tr>
+          
+        </table></b>
+    </body>
+</html>
+
