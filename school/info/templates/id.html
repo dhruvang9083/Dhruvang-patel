@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        <style>
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 500px;
+}
+
+th {
+    height: 50px;
+}
+</style>
+    </style>
+</head>
+    <body>
+   <!--  {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %} -->
+        <center><h1>{{course}}</h1>
+        <b><table border="5">
+              <tr style="color:Black" bgcolor="Gray">
+               
+                <th>Teacher</th>
+            
+             </tr>
+            {% for item in teachers %}
+            <tr style="text-align:center">
+
+               
+               <td> {{item.name}}</a></td>
+            </tr>
+            {% endfor %}
+
+        </table>
+        <br><br>
+        <table  border="5">
+         <tr style="color:Black" bgcolor="Gray">
+           <th>Student</th>
+            </tr>
+
+             {% for item in students %}
+            <tr style="text-align:center">
+
+               
+               <td> {{item.name}}</a></td>
+                <!-- <td>{{ .price}}</td>
+                <td>{{ product.quantity}}</td> -->
+            </tr>
+            {% endfor %}
+        </table></b>
+        </center>
+    </body>
+</html>
+
